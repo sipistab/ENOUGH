@@ -1,0 +1,25 @@
+name: "Self-Awareness Exercise"
+description: "Custom sentence completion exercise focusing on self-awareness"
+version: "1.0"
+author: "Custom Template"
+
+settings:
+  responses_per_stem: 3
+  frequency: "daily"
+  reflection_period: "weekly"
+
+stems:
+  morning:
+    - "Today, I am feeling..."
+    - "My main focus for today is..."
+    - "I would feel more energized if..."
+    
+  evening:
+    - "Today I learned..."
+    - "I am grateful for..."
+    - "Tomorrow, I will..."
+
+weekly_reflection:
+  - "This week's biggest insight was..."
+  - "I made progress on..."
+  - "Next week, I want to focus on..." 

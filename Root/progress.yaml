@@ -1,0 +1,22 @@
+version: "1.0"
+last_updated: "2024-01-20"  # Will be updated by program
+
+active_exercises:
+  - name: "Nathaniel Branden Sentence Completion"
+    started: "2024-01-15"
+    current_week: 1
+    current_day: 5
+    completed_days: 5
+    completed_weeks: 0
+    
+  - name: "Self-Awareness Exercise"
+    started: "2024-01-20"
+    entries_completed: 3
+    last_reflection: "2024-01-19"
+
+completed_exercises: []  # Will store history of completed exercise programs
+
+settings:
+  backup_frequency: "weekly"
+  reminder_time: "08:00"
+  preferred_exercise: "Nathaniel Branden Sentence Completion" 

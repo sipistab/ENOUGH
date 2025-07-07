@@ -1,0 +1,33 @@
+name: "Nathaniel Branden Sentence Completion - Weekday Exercises"
+description: "Daily sentence completion exercises based on Nathaniel Branden's method"
+version: "1.0"
+
+settings:
+  responses_per_stem: 5
+  stems_per_day: 4
+  days_per_week: 5
+
+weeks:
+  week1:
+    theme: "Self-Awareness and Responsibility"
+    stems:
+      - "If I bring more awareness to my life today…"
+      - "If I take more responsibility for my choices and actions today…"
+      - "If I pay more attention to how I deal with people today…"
+      - "If I boost my energy level by 5 percent today…"
+
+  week2:
+    theme: "Deeper Self-Awareness"
+    stems:
+      - "If I bring 5 percent more awareness to my important relationships…"
+      - "If I bring 5 percent more awareness to my insecurities…"
+      - "If I bring 5 percent more awareness to my deepest needs and wants…"
+      - "If I bring 5 percent more awareness to my emotions…"
+
+  week3:
+    theme: "Interpersonal Awareness"
+    stems:
+      - "If I treat listening as a creative act…"
+      - "If I notice how people are affected by the quality of my listening…"
+      - "If I bring more awareness to my dealings with people today…"
+      - "If I commit to dealing with people fairly and benevolently…" 

@@ -1,0 +1,29 @@
+name: "Nathaniel Branden Sentence Completion - Weekend Reflections"
+description: "Weekend assessment and reflection exercises"
+version: "1.0"
+
+settings:
+  responses_required: 5
+  reflection_days: [6, 7]  # Saturday and Sunday
+
+reflection_process:
+  step1:
+    name: "Review Daily Responses"
+    instruction: "Review all your responses from the past week"
+    
+  step2:
+    name: "Pattern Recognition"
+    instruction: "Note any patterns, themes, or insights that emerge"
+    
+  step3:
+    name: "Weekly Integration"
+    stems:
+      - "If any of what I wrote this week is true, it would be helpful if I..."
+      - "When I reflect on my responses this week, I notice that I..."
+      - "Looking at my responses, one thing I could do differently is..."
+      
+  step4:
+    name: "Action Planning"
+    stems:
+      - "Based on this week's insights, I commit to..."
+      - "One small step I can take this week is..." 
