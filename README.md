@@ -5,62 +5,87 @@ A flexible journaling system supporting various self-reflection exercises, inclu
 ## Project Structure
 
 ```
-└── Root/
-    └── Core/
-        ├── Data/           # User responses and exercise data
-        └── Maintenance/    # Project maintenance files (.gitignore, etc.)
-    └── Exercises/
-        ├── Nathanial Branden - Sentence Completion/
-            ├── weekday_exercises.yaml    # Daily exercises
-            └── weekend_reflections.yaml  # Weekend assessment
-        └── Custom Sentence Completion/
-            └── self_awareness.yaml       # Custom exercise template
-    ├── README.md          # This file
-    └── progress.yaml      # Progress tracking
+Project Root/
+├── Core/                           # Core program functionality
+│   ├── Data/                      # User data and responses
+│   ├── Maintenance/              # Project maintenance files
+│   ├── sentence_completion/      # Main program modules
+│   ├── SentenceCompletion.py    # Main program file
+│   └── SentenceCompletionStartup.{bat,sh}  # Startup scripts
+│
+├── Exercises/                      # Exercise templates
+│   ├── Nathanial Branden - Sentence Completion/
+│   │   ├── weekday_exercises.yaml
+│   │   └── weekend_reflections.yaml
+│   └── Custom Sentence Completion/
+│       └── self_awareness.yaml
+│
+├── README.md                      # This file
+└── progress.yaml                  # Progress tracking
 ```
 
 ## Features
 
-- **Modular Exercise System**
-  - Nathaniel Branden's Sentence Completion
-  - Custom exercise templates
-  - Easy to add new exercise types
+### Current Features
+- Nathaniel Branden's Sentence Completion exercises
+- Custom exercise templates
+- Immediate response saving
+- Progress tracking
 
-- **Progress Tracking**
-  - Automatic date/progress management
-  - Multiple concurrent exercises
+### Upcoming Features
+- **Flexible Exercise Templates**
+  - Create custom YAML templates
+  - Configure exercise frequency
+  - Set custom journaling periods
+  - Define your own prompts
+
+- **Smart Calendar System**
+  - Track exercise completion
+  - View progress history
+  - Automatic date handling
+  - Exercise scheduling
+
+- **Intelligent Menu**
+  - Automatic day/progress detection
+  - Smart exercise suggestions
   - Progress visualization
 
-- **Data Management**
-  - Secure local storage in Core/Data
-  - Automated backups
-  - Exercise history
+## Creating Custom Exercises
 
-## Exercise Types
+### Template Structure (Coming Soon)
+```yaml
+name: "My Custom Exercise"
+frequency:
+  type: "daily" | "weekly" | "custom"
+  days: [1, 3, 5]  # Example: Monday, Wednesday, Friday
+  
+prompts:
+  morning:
+    - "Today I am grateful for..."
+    - "My main focus today is..."
+  evening:
+    - "Today I learned..."
+    - "Tomorrow I will..."
 
-### Nathaniel Branden Sentence Completion
-- Daily sentence stems (Monday-Friday)
-- Weekend reflection and integration
-- 30-week structured program
-
-### Custom Exercises
-- Create your own sentence completion exercises
-- Flexible scheduling options
-- Customizable prompts and reflection periods
+reflection:
+  frequency: "weekly"
+  prompts:
+    - "This week's biggest insight was..."
+    - "Next week I want to focus on..."
+```
 
 ## Getting Started
 
 1. Choose an exercise type from the `Exercises` directory
-2. Run the program and select your exercise
+2. Run the appropriate startup script from the `Core` directory
 3. Follow the daily prompts
-4. Complete weekend reflections when scheduled
+4. Complete reflections when scheduled
 
-## Data Security
+## Data Management
 
-- All data stored locally in Core/Data
-- Optional encryption
-- Regular automated backups
-- Export functionality
+- All responses saved immediately
+- Local storage in Core/Data
+- Progress tracking in progress.yaml
 
 ## Contributing
 
