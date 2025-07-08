@@ -1,0 +1,35 @@
+name: "Weekly Review"
+frequency: "weekly"
+answers_required: "submit"  # Free writing mode
+min_words: 50
+max_time: 600
+
+prompts:
+  p_000:
+    prompt: "What were my main accomplishments this week?"
+    tags: ["achievements", "reflection"]
+    
+  p_001:
+    prompt: "What challenges did I face and how did I handle them?"
+    tags: ["challenges", "growth"]
+    
+  p_002:
+    prompt: "What am I learning about myself?"
+    tags: ["self-awareness", "growth"]
+    
+  p_003:
+    prompt: "How am I progressing towards my goals?"
+    tags: ["goals", "progress"]
+    follow_up: "p_004"
+    
+  p_004:
+    prompt: "What adjustments do I need to make to my goals or approach?"
+    tags: ["planning", "goals"]
+    
+  p_005:
+    prompt: "What support or resources do I need for next week?"
+    tags: ["planning", "support"]
+    
+  p_006:
+    prompt: "What am I looking forward to next week?"
+    tags: ["motivation", "planning"] 

@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+include Core/requirements.txt
+recursive-include Core/sentence_completion/templates *.yaml
+recursive-include Exercises *.yaml 

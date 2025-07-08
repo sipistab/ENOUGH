@@ -1,0 +1,32 @@
+name: "Daily Reflection"
+frequency: "daily"
+answers_required: 3
+min_words: 20
+max_time: 300
+
+prompts:
+  p_000:
+    prompt: "What's on my mind right now..."
+    tags: ["reflection", "awareness"]
+    
+  p_001:
+    prompt: "Today I'm grateful for..."
+    tags: ["gratitude"]
+    follow_up: "p_002"
+    
+  p_002:
+    prompt: "How can I express this gratitude?"
+    tags: ["action", "gratitude"]
+    
+  p_003:
+    prompt: "What challenges am I facing?"
+    tags: ["challenges"]
+    follow_up: "p_004"
+    
+  p_004:
+    prompt: "What resources or support could help me with these challenges?"
+    tags: ["solutions", "support"]
+    
+  p_005:
+    prompt: "One small step I can take today is..."
+    tags: ["action", "progress"] 

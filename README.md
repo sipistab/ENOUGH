@@ -1,215 +1,179 @@
 # Personal Growth Journal
 
-A flexible journaling system supporting various self-reflection exercises, including Nathaniel Branden's sentence completion method.
+A flexible journaling system for personal growth and self-reflection, supporting customizable prompts, scheduled exercises, and structured reviews.
 
-## Project Structure
+## TODO: Installation Setup
+- [ ] Set up PyPI account and configure credentials
+- [ ] Create and test PyPI package upload workflow
+- [ ] Generate and verify package hash for AUR package
+- [ ] Test installation scripts on different platforms
+- [ ] Add CI/CD pipeline for automated package publishing
+- [ ] Update AUR package URL after first PyPI release
+- [ ] Add version badges and PyPI status to README
+- [ ] Create detailed installation troubleshooting guide
 
-```
-Project Root/
-├── Core/                           # Core program functionality
-│   ├── Data/                      # User data and responses
-│   ├── Maintenance/              # Project maintenance files
-│   ├── sentence_completion/      # Main program modules
-│   ├── SentenceCompletion.py    # Main program file
-│   └── SentenceCompletionStartup.{bat,sh}  # Startup scripts
-│
-├── Exercises/                      # Exercise templates
-│   ├── Nathanial Branden - Sentence Completion/
-│   │   ├── weekday_exercises.yaml
-│   │   └── weekend_reflections.yaml
-│   └── Custom Sentence Completion/
-│       └── self_awareness.yaml
-│
-├── README.md                      # This file
-└── progress.yaml                  # Progress tracking
+**Note:** Currently in development. Installation methods will be fully implemented in upcoming updates. For now, use the manual installation method:
+
+```bash
+git clone https://github.com/yourusername/personal-growth-journal.git
+cd personal-growth-journal
+pip install -e .
 ```
 
 ## Features
 
-### Current Features
-- Nathaniel Branden's Sentence Completion exercises
-- Custom exercise templates
-- Immediate response saving
-- Progress tracking
-
-### Upcoming Features
-- **Flexible Exercise Templates**
-  - Create custom YAML templates
-  - Configure exercise frequency
-  - Set custom journaling periods
-  - Define your own prompts
-
-- **Smart Calendar System**
-  - Track exercise completion
-  - View progress history
-  - Automatic date handling
-  - Exercise scheduling
-
-- **Intelligent Menu**
-  - Automatic day/progress detection
-  - Smart exercise suggestions
-  - Progress visualization
-
-## Creating Custom Exercises
-
-### Template Structure (Coming Soon)
-```yaml
-name: "My Custom Exercise"
-frequency:
-  type: "daily" | "weekly" | "custom"
-  days: [1, 3, 5]  # Example: Monday, Wednesday, Friday
-  
-prompts:
-  morning:
-    - "Today I am grateful for..."
-    - "My main focus today is..."
-  evening:
-    - "Today I learned..."
-    - "Tomorrow I will..."
-
-reflection:
-  frequency: "weekly"
-  prompts:
-    - "This week's biggest insight was..."
-    - "Next week I want to focus on..."
-```
-
-## Getting Started
-
-1. Choose an exercise type from the `Exercises` directory
-2. Run the appropriate startup script from the `Core` directory
-3. Follow the daily prompts
-4. Complete reflections when scheduled
-
-## Data Management
-
-- All responses saved immediately
-- Local storage in Core/Data
-- Progress tracking in progress.yaml
-
-## Contributing
-
-To add new exercise templates:
-1. Create a new YAML file in the appropriate directory
-2. Follow the template structure
-3. Test thoroughly before use
-
-## License
-
-Personal use only. Do not distribute without permission.
-Nathaniel Branden's method is based on his original work - please support by purchasing his books.
-
-# Preface
-
-I have only shared this project directly with the ones I most respect. I hold your presence in high esteem. My hope is that this work proves valuable to you, aiding your personal journey. Please use it as you see fit, for your benefit and growth.
-
-I was inspired by the concepts presented in "The Six Pillars of Self-Esteem" book. While I highly recommend reading it, it is not essential for the exercises to be effective.
-
-You can read more about the original work here: https://nathanielbranden.com/sentence-completion-i/
-
-Please note that this is only a passion project of mine as I learn how to develop applications, I did not request the author's premission to use his work and neither is this a commercial application. Please do not distribute this application without my premission. Nathanial dedicated a lifetime to creating this masterpiece. His family receives royalties from the sold copies, so if you enjoy his work, please consider purchasing the book.
-
-# Sentence Completion Compiler
-
-## Purpose
-This Python application offers a solitary path into the depths of self-awareness through Nathaniel Branden's sentence completion exercises. It provides a focused, distraction-free environment for daily introspection, eliminating the complexities of physical paperwork. The program is designed to be used daily, with sentence completion exercises during weekdays and assessments on weekends.
-
-## Features
-- Daily sentence completion exercises
-- Weekly progress assessments
-- Secure storage of personal responses
-- Automatic data backup
-- Progress tracking
-- Cross-platform compatibility
+- Custom prompt scheduling (daily, weekly, monthly)
+- Follow-up questions and response tracking
+- Weekly review system
+- Progress tracking and statistics
+- Tag-based organization
+- Flexible response formats
 
 ## Installation
 
-### Prerequisites
-- Python 3.8 or higher
-- pip (Python package installer)
+### Option 1: PyPI (All Platforms)
 
-### Setup
-1. Clone or download this repository
-2. Navigate to the project directory
-3. Install required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-### Running the Program
-- **Windows**: Double-click `SentenceCompletionStartup.bat`
-- **macOS/Linux**: Run `./SentenceCompletionStartup.sh`
-- **Manual Start**: Run `python SentenceCompletion.py`
-
-## Usage Guide
-
-### Daily Exercises (Option 1)
-1. Select option [1] for Daily Log
-2. Enter the week number (1-30)
-3. Enter the day number (1-5)
-4. Complete the sentence stems provided
-5. Your responses are automatically saved and encrypted
-
-### Weekly Assessment (Option 2)
-1. Select option [2] for Weekly Assessment
-2. Enter the week number to review
-3. Review your responses from the week
-4. Complete the assessment questions
-5. Results are saved for future reference
-
-### Data Management
-- All responses are automatically encrypted
-- Weekly backups are created automatically
-- Export functionality available for data portability
-- Data is stored locally on your system only
-
-## Security Features
-- Local data storage only - no cloud or external servers
-- Optional file encryption for sensitive data
-- Regular backup reminders
-- Data export capabilities
-
-## File Structure
-```
-sentence-completion/
-├── README.md
-├── requirements.txt
-├── SentenceCompletion.py
-├── SentenceCompletion.txt
-├── SentenceCompletionStartup.bat
-└── SentenceCompletionStartup.sh
+Install directly from PyPI:
+```bash
+pip install sentence-completion
 ```
 
-## Troubleshooting
-- **Program won't start**: Ensure Python is installed and in your system PATH
-- **File access errors**: Check file permissions in your user directory
-- **Backup issues**: Ensure sufficient disk space and write permissions
+### Option 2: Arch Linux (AUR)
 
-## Support
-For technical support or questions, please open an issue in the repository or contact the developer directly.
+Install using your preferred AUR helper:
+```bash
+yay -S python-sentence-completion
+```
 
-## Privacy Notice
-This application:
-- Stores all data locally on your device
-- Never transmits data over the internet
-- Provides optional encryption for sensitive information
-- Allows complete data deletion at any time
+Or manually:
+```bash
+git clone https://aur.archlinux.org/python-sentence-completion.git
+cd python-sentence-completion
+makepkg -si
+```
 
-## Future Development
-- Web-based version with secure authentication
-- Mobile application support
-- Enhanced progress visualization
-- Integration with journaling features
+### Option 3: Automatic Installation Scripts
+
+#### Linux/macOS:
+```bash
+git clone https://github.com/yourusername/personal-growth-journal.git
+cd personal-growth-journal
+chmod +x install.sh
+./install.sh
+```
+
+#### Windows:
+```bash
+git clone https://github.com/yourusername/personal-growth-journal.git
+cd personal-growth-journal
+install.bat
+```
+
+### Option 4: Manual Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/personal-growth-journal.git
+cd personal-growth-journal
+```
+
+2. Create and activate a virtual environment (optional but recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate.bat  # Windows
+```
+
+3. Install the package:
+```bash
+pip install -e .
+```
+
+## Usage
+
+### Starting an Exercise
+
+```bash
+sentence-completion start exercises/daily.yaml
+```
+
+### Running Weekly Review
+
+```bash
+sentence-completion review exercises/daily.yaml
+```
+
+### Adding Custom Entries
+
+```bash
+sentence-completion add "What did I learn today?" --tags learning,reflection --answers 3
+```
+
+## Exercise File Format
+
+Exercise files use YAML format with the following structure:
+
+```yaml
+name: "Daily Reflection"
+frequency: "daily"  # or "weekly", "monthly", or custom settings
+
+# For custom frequency, specify days, weeks and months
+frequency:
+  days: [1, 3, 5]  # 1=Monday, 7=Sunday
+  weekly: [1, 3, 5] # 1=Every week, 3=Every 3 weeks
+  monthly: [1, 3, 5] # 1=Every month, 3=Every 3 months
+  months: [1, 3, 5] # 1=January, 12=December
+
+# Default settings
+answers_required: 1  # Number of responses required
+min_words: 0       # Minimum words per response
+max_time: 300      # Maximum time in seconds
+
+# The actual prompts
+prompts:
+  p_000:  # You have to assign every question an ID like so
+    prompt: "What's on my mind right now..."
+    tags: ["reflection"]
+    answers_required: 3  # Override default
+    
+  p_001:  # Sequential IDs required
+    prompt: "What am I grateful for today?"
+    tags: ["gratitude"]
+    follow_up: "p_002"  # Reference to follow-up question
+    
+  p_002:
+    prompt: "How can I express this gratitude?"
+    tags: ["action", "gratitude"]
+```
+
+## Directory Structure
+
+```
+Core/
+├── sentence_completion/     # Main package
+│   ├── cli/               # Command line interface
+│   ├── core/              # Core functionality
+│   └── utils/             # Utility functions
+│
+├── Submissions/           # Journal entries
+│   ├── Daily_Reflection/  # Organized by exercise
+│   │   ├── YYYY_MM_DD_1.yaml
+│   │   └── YYYY_MM_DD_review.yaml
+│   └── Custom_Entries/    # Custom journal entries
+│
+└── Exercises/            # Exercise templates
+    ├── daily.yaml
+    └── weekly.yaml
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## License
-This is a personal project shared with select individuals. Please do not distribute without permission. The sentence completion method is based on Nathaniel Branden's work - please support the original author by purchasing his books.
 
-## Acknowledgments
-- Nathaniel Branden for the original sentence completion methodology
-- All users who have provided valuable feedback
-- The Python community for excellent libraries and tools
-
-
-
-
-
+This project is licensed under the MIT License - see the LICENSE file for details.
