@@ -22,8 +22,8 @@ wheels/
 
 # Virtual Environment
 venv/
-ENV/
 env/
+ENV/
 
 # IDE
 .idea/
@@ -31,10 +31,13 @@ env/
 *.swp
 *.swo
 
-# Logs and databases
+# Logs
 *.log
-*.sqlite
-*.db
+
+# Local development
+.env
+.env.local
+.env.*.local
 
 # OS
 .DS_Store

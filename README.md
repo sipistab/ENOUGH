@@ -1,4 +1,4 @@
-# Personal Growth Journal
+# ENOUGH- The CLI Journal
 
 A flexible journaling system for personal growth and self-reflection, supporting customizable prompts, scheduled exercises, and structured reviews.
 
@@ -7,8 +7,6 @@ A flexible journaling system for personal growth and self-reflection, supporting
 - [ ] Create and test PyPI package upload workflow
 - [ ] Generate and verify package hash for AUR package
 - [ ] Test installation scripts on different platforms
-- [ ] Add CI/CD pipeline for automated package publishing
-- [ ] Update AUR package URL after first PyPI release
 - [ ] Add version badges and PyPI status to README
 - [ ] Create detailed installation troubleshooting guide
 

@@ -1,5 +1,7 @@
-include README.md
 include LICENSE
-include Core/requirements.txt
-recursive-include Core/sentence_completion/templates *.yaml
-recursive-include Exercises *.yaml 
+include README.md
+include pyproject.toml
+recursive-include Core/enough/templates *.yaml
+recursive-include Core/enough/data *
+recursive-include Exercises *.yaml
+include progress.yaml 
