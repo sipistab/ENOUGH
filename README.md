@@ -1,177 +1,97 @@
-# ENOUGH- The CLI Journal
+# ENOUGH - A Mindful Journaling Tool
 
-A flexible journaling system for personal growth and self-reflection, supporting customizable prompts, scheduled exercises, and structured reviews.
+[![PyPI version](https://badge.fury.io/py/enough-journal.svg)](https://badge.fury.io/py/enough-journal)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
-## TODO: Installation Setup
-- [ ] Set up PyPI account and configure credentials
-- [ ] Create and test PyPI package upload workflow
-- [ ] Generate and verify package hash for AUR package
-- [ ] Test installation scripts on different platforms
-- [ ] Add version badges and PyPI status to README
-- [ ] Create detailed installation troubleshooting guide
-
-**Note:** Currently in development. Installation methods will be fully implemented in upcoming updates. For now, use the manual installation method:
-
-```bash
-git clone https://github.com/yourusername/personal-growth-journal.git
-cd personal-growth-journal
-pip install -e .
-```
+A flexible command-line journaling system for personal growth and self-reflection, supporting customizable prompts, scheduled exercises, and structured reviews.
 
 ## Features
 
+🎯 **Focused Journaling**
 - Custom prompt scheduling (daily, weekly, monthly)
 - Follow-up questions and response tracking
-- Weekly review system
-- Progress tracking and statistics
+- Progress visualization
+
+📝 **Flexible Templates**
+- YAML-based template system
 - Tag-based organization
-- Flexible response formats
+- Multiple response formats
+
+🔍 **Review & Reflect**
+- Weekly review system
+- Progress tracking
+- Export capabilities
+
+## Quick Start
+
+```bash
+# Install from PyPI
+pip install enough-journal
+
+# Start journaling
+enough
+```
 
 ## Installation
 
-### Option 1: PyPI (All Platforms)
-
-Install directly from PyPI:
+### PyPI (All Platforms)
 ```bash
-pip install sentence-completion
+pip install enough-journal
 ```
 
-### Option 2: Arch Linux (AUR)
-
-Install using your preferred AUR helper:
+### Manual Installation
 ```bash
-yay -S python-sentence-completion
-```
-
-Or manually:
-```bash
-git clone https://aur.archlinux.org/python-sentence-completion.git
-cd python-sentence-completion
-makepkg -si
-```
-
-### Option 3: Automatic Installation Scripts
-
-#### Linux/macOS:
-```bash
-git clone https://github.com/yourusername/personal-growth-journal.git
-cd personal-growth-journal
-chmod +x install.sh
-./install.sh
-```
-
-#### Windows:
-```bash
-git clone https://github.com/yourusername/personal-growth-journal.git
-cd personal-growth-journal
-install.bat
-```
-
-### Option 4: Manual Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/personal-growth-journal.git
-cd personal-growth-journal
-```
-
-2. Create and activate a virtual environment (optional but recommended):
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate.bat  # Windows
-```
-
-3. Install the package:
-```bash
+git clone https://github.com/sipistab/ENOUGH.git
+cd ENOUGH
 pip install -e .
 ```
 
 ## Usage
 
-### Starting an Exercise
+1. **Start a New Journal Entry**
+   ```bash
+   enough
+   ```
+   Select "Start Journaling Session" from the menu.
 
-```bash
-sentence-completion start exercises/daily.yaml
-```
+2. **Review Past Entries**
+   ```bash
+   enough
+   ```
+   Select "Review Past Entries" from the menu.
 
-### Running Weekly Review
+3. **Create Custom Templates**
+   ```bash
+   enough
+   ```
+   Select "Manage Exercise Templates" from the menu.
 
-```bash
-sentence-completion review exercises/daily.yaml
-```
+## Template Format
 
-### Adding Custom Entries
-
-```bash
-sentence-completion add "What did I learn today?" --tags learning,reflection --answers 3
-```
-
-## Exercise File Format
-
-Exercise files use YAML format with the following structure:
+Templates use YAML format:
 
 ```yaml
 name: "Daily Reflection"
-frequency: "daily"  # or "weekly", "monthly", or custom settings
+frequency: "daily"
 
-# For custom frequency, specify days, weeks and months
-frequency:
-  days: [1, 3, 5]  # 1=Monday, 7=Sunday
-  weekly: [1, 3, 5] # 1=Every week, 3=Every 3 weeks
-  monthly: [1, 3, 5] # 1=Every month, 3=Every 3 months
-  months: [1, 3, 5] # 1=January, 12=December
-
-# Default settings
-answers_required: 1  # Number of responses required
-min_words: 0       # Minimum words per response
-max_time: 300      # Maximum time in seconds
-
-# The actual prompts
 prompts:
-  p_000:  # You have to assign every question an ID like so
+  p_000:
     prompt: "What's on my mind right now..."
     tags: ["reflection"]
-    answers_required: 3  # Override default
+    answers_required: 3
     
-  p_001:  # Sequential IDs required
+  p_001:
     prompt: "What am I grateful for today?"
     tags: ["gratitude"]
-    follow_up: "p_002"  # Reference to follow-up question
+    follow_up: "p_002"
     
   p_002:
     prompt: "How can I express this gratitude?"
     tags: ["action", "gratitude"]
 ```
 
-## Directory Structure
-
-```
-Core/
-├── sentence_completion/     # Main package
-│   ├── cli/               # Command line interface
-│   ├── core/              # Core functionality
-│   └── utils/             # Utility functions
-│
-├── Submissions/           # Journal entries
-│   ├── Daily_Reflection/  # Organized by exercise
-│   │   ├── YYYY_MM_DD_1.yaml
-│   │   └── YYYY_MM_DD_review.yaml
-│   └── Custom_Entries/    # Custom journal entries
-│
-└── Exercises/            # Exercise templates
-    ├── daily.yaml
-    └── weekly.yaml
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This work is released under [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+
+You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.

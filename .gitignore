@@ -44,7 +44,6 @@ ENV/
 Thumbs.db
 
 # Project specific
-%APPDATA%/
 Core/Data/logs/
 *.bak
 
