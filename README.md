@@ -1,3 +1,79 @@
+# Personal Growth Journal
+
+A flexible journaling system supporting various self-reflection exercises, including Nathaniel Branden's sentence completion method.
+
+## Project Structure
+
+```
+└── Root/
+    └── Core/
+        ├── Data/           # User responses and exercise data
+        └── Maintenance/    # Project maintenance files (.gitignore, etc.)
+    └── Exercises/
+        ├── Nathanial Branden - Sentence Completion/
+            ├── weekday_exercises.yaml    # Daily exercises
+            └── weekend_reflections.yaml  # Weekend assessment
+        └── Custom Sentence Completion/
+            └── self_awareness.yaml       # Custom exercise template
+    ├── README.md          # This file
+    └── progress.yaml      # Progress tracking
+```
+
+## Features
+
+- **Modular Exercise System**
+  - Nathaniel Branden's Sentence Completion
+  - Custom exercise templates
+  - Easy to add new exercise types
+
+- **Progress Tracking**
+  - Automatic date/progress management
+  - Multiple concurrent exercises
+  - Progress visualization
+
+- **Data Management**
+  - Secure local storage in Core/Data
+  - Automated backups
+  - Exercise history
+
+## Exercise Types
+
+### Nathaniel Branden Sentence Completion
+- Daily sentence stems (Monday-Friday)
+- Weekend reflection and integration
+- 30-week structured program
+
+### Custom Exercises
+- Create your own sentence completion exercises
+- Flexible scheduling options
+- Customizable prompts and reflection periods
+
+## Getting Started
+
+1. Choose an exercise type from the `Exercises` directory
+2. Run the program and select your exercise
+3. Follow the daily prompts
+4. Complete weekend reflections when scheduled
+
+## Data Security
+
+- All data stored locally in Core/Data
+- Optional encryption
+- Regular automated backups
+- Export functionality
+
+## Contributing
+
+To add new exercise templates:
+1. Create a new YAML file in the appropriate directory
+2. Follow the template structure
+3. Test thoroughly before use
+
+## License
+
+Personal use only. Do not distribute without permission.
+Nathaniel Branden's method is based on his original work - please support by purchasing his books.
+
 # Preface
 
 I have only shared this project directly with the ones I most respect. I hold your presence in high esteem. My hope is that this work proves valuable to you, aiding your personal journey. Please use it as you see fit, for your benefit and growth.
