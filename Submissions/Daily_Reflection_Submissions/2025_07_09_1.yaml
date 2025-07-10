@@ -1,0 +1,87 @@
+exercise: Daily Reflection
+responses:
+  p_000:
+    answers:
+    - text: asd
+      time_taken: 0
+      word_count: 1
+    - text: asd
+      time_taken: 0
+      word_count: 1
+    - text: asd
+      time_taken: 0
+      word_count: 1
+    tags:
+    - reflection
+    - awareness
+  p_001:
+    answers:
+    - text: ads
+      time_taken: 0
+      word_count: 1
+    - text: asd
+      time_taken: 0
+      word_count: 1
+    - text: asd
+      time_taken: 0
+      word_count: 1
+    follow_up_completed: p_002
+    tags:
+    - gratitude
+  p_002:
+    answers:
+    - text: sd
+      time_taken: 0
+      word_count: 1
+    - text: ''
+      time_taken: 0
+      word_count: 0
+    - text: as
+      time_taken: 0
+      word_count: 1
+    tags:
+    - action
+    - gratitude
+  p_003:
+    answers:
+    - text: d
+      time_taken: 0
+      word_count: 1
+    - text: d
+      time_taken: 0
+      word_count: 1
+    - text: a
+      time_taken: 0
+      word_count: 1
+    follow_up_completed: p_004
+    tags:
+    - challenges
+  p_004:
+    answers:
+    - text: sd
+      time_taken: 0
+      word_count: 1
+    - text: ds
+      time_taken: 0
+      word_count: 1
+    - text: ads
+      time_taken: 0
+      word_count: 1
+    tags:
+    - solutions
+    - support
+  p_005:
+    answers:
+    - text: ds
+      time_taken: 0
+      word_count: 1
+    - text: ads
+      time_taken: 0
+      word_count: 1
+    - text: ds
+      time_taken: 0
+      word_count: 1
+    tags:
+    - action
+    - progress
+timestamp: '2025-07-09T13:01:09.296534'
