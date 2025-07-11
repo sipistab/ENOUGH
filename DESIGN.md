@@ -1,7 +1,7 @@
 # ENOUGH - The Growth Journal
 
 ## Overview
-ENOUGH is a command-line tool for personal development through structured journaling and reflection exercises, with a particular focus on the Nathaniel Branden sentence completion method. The program provides a structured, consistent approach to self-reflection and personal growth. 
+ENOUGH is a command-line tool for personal development through structured journaling and reflection exercises, with a particular focus on the Nathaniel Branden sentence completion method. The program provides a structured, consistent approach to self-reflection and personal growth.
 
 Scheduling my notes enables me to stay consistent. Recurring tasks keep me reliable and I yarned for something robust that can quickly pick up on my needs. Like running a journal every day. This shows me that I am expected to think about something. For example at a glance, I can see that today I am supposed to have a daily sentence completion, a summary of my weekend, a workout I will need to log and it is the last Sunday of the month so an end of month revision as well. If I miss some, I expect my calendar to show this, so I can revisit later, and if I fail some of the exercises, I expect my journal to recalculate my deloading ahead of time. This is not simple to set up in most notetaking systems and even if it is possible, it is hard to make changes. I had enough, so I made Enough, it's not perfect, but you know what it is.
 
@@ -13,7 +13,7 @@ Scheduling my notes enables me to stay consistent. Recurring tasks keep me relia
   - 6-10 completions per stem
   - Same stem used for 5 consecutive days
   - Weekend reflection on the week's responses
-  
+
 - **Custom Exercises**
   - User-defined prompts and templates
   - Flexible scheduling (daily, weekly, monthly)
@@ -24,17 +24,139 @@ Scheduling my notes enables me to stay consistent. Recurring tasks keep me relia
 
 ### 2. Data Structure
 ```
-exercises/
-  ├── nathaniel_branden_method/     # Core Feature, folder not to be changed
-  │   ├── sentence_completion.yaml  # Weekly sentence stems
-  ├── custom/
-  │   ├── daily_note.yaml           # Custom exercises, custom names
-  ├── starting_strenght/            # Core Feature, folder not to be changed
-  │   ├── workouts.yaml             # Dynamic workout yaml file
+main/                           # Core program files
+  ├── install.bat              # Windows installation script
+  ├── install.sh              # Unix installation script
+  ├── MANIFEST.in             # Python package manifest
+  ├── progress.yaml           # Progress tracking
+  ├── pyproject.toml         # Project configuration
+  └── setup.py               # Package setup
+
+templates/                      # Exercise templates
+  ├── nathaniel_branden_method/  # Branden's sentence completion
+  │   ├── sentence_completion.yaml  # Weekly stems
+  │   └── branden_method.yaml      # Method configuration
+  ├── custom/                    # User-defined templates
+  │   └── daily_note.yaml        # Daily reflection template
+  └── starting_strenght/         # Workout tracking
+      └── workouts.yaml          # Workout configuration
+
+submissions/                    # User entries
+  ├── nathaniel_branden_method/  # Branden method entries
+  │   ├── YYYY_MM_DD_1.yaml     # Daily entries
+  │   └── YYYY_MM_DD_weekend.yaml # Weekend reflections
+  ├── custom/                    # Custom template entries
+  │   └── YYYY_MM_DD_*.yaml     # Various custom entries
+  └── starting_strength/         # Workout logs
+      └── YYYY_MM_DD_1.yaml     # Daily workout logs
+
+maintenance/                    # Maintenance scripts and tools
 ```
 
-
 ### 3. YAML Structure
+
+#### Progress Tracking (main/progress.yaml)
+```yaml
+__meta__:
+  total_entries: 45
+  total_reviews: 102
+  first_entry: "2024-03-21"
+  last_session: "2024-03-21"
+  daily_log:
+    "2024-03-21": 3  # Number of entries that day
+
+exercises:
+  nathaniel_branden_method:
+    sentence_completion:
+      entries: 30
+      last_entry: "2024-03-21"
+    weekend_reflection:
+      entries: 12
+      last_entry: "2024-03-16"
+ 
+  starting_strength:
+    workouts:
+      entries: 15
+      last_entry: "2024-03-20"
+ 
+  custom:
+    daily_note:
+      entries: 10
+      last_entry: "2024-03-20"
+```
+
+#### Branden Method Entry (submissions/nathaniel_branden_method/YYYY_MM_DD_1.yaml)
+```yaml
+date: "2024-03-21"
+time: "07:15:32"
+stem: "If I bring more awareness to my life today…"
+completions:
+  - "First completion"
+  - "Second completion"
+  # ... 6-10 completions total
+duration: 240  # seconds
+tags: ["week1"]
+```
+
+#### Weekend Reflection (submissions/nathaniel_branden_method/YYYY_MM_DD_weekend.yaml)
+```yaml
+date: "2024-03-23"
+time: "09:30:15"
+stem: "If any of what I have been writing this week is true…"
+reflection: |
+  Detailed reflection on the week's insights...
+duration: 480  # seconds
+tags: ["weekend", "week1"]
+```
+
+#### Workout Log (submissions/starting_strength/YYYY_MM_DD_1.yaml)
+```yaml
+date: "2024-03-21"
+time: "16:45:22"
+workout_type: "week_A"
+bodyweight: 75.5  # kg
+duration: 65  # minutes
+
+exercises:
+  squat:
+    warmup:
+      - {weight: 30, reps: 5, outcome: "pass"}
+    working_sets:
+      - {weight: 60, reps: 5, outcome: "pass"}
+    notes: "Form notes"
+
+  # ... other exercises ...
+
+total_volume: 6475  # kg
+notes: "Session notes"
+```
+
+#### Daily Note (submissions/custom/YYYY_MM_DD_daily_note.yaml)
+```yaml
+date: "2024-03-21"
+time: "06:30:00"
+template: "daily_note"
+
+entries:
+  gratitude:
+    - "Entry 1"
+    - "Entry 2"
+    - "Entry 3"
+
+  priorities:
+    - "Priority 1"
+    - "Priority 2"
+
+  reflection: |
+    Daily reflection text...
+
+  mood_rating: 8
+  energy_level: 7
+  sleep_hours: 7.5
+
+duration: 180  # seconds
+tags: ["morning_routine", "daily"]
+```
 
 ## Progress Tracking
 
@@ -82,7 +204,7 @@ name: "Nathaniel Branden's Sentence Completion Method"
 description: "The original sentence completion practice from The Six Pillars of Self-Esteem. Each stem is practiced for a full week (Mon-Fri) with 6-10 different endings each day. Weekend reflection focuses on insights from that week's practice."
 
 defaults:
-  log_path: "Submissions\Nathaniel_Branden_Method"    # This is also where submissions are gathered from, must be the same
+  log_path: "submissions/nathaniel_branden_method"    # This is also where submissions are gathered from, must be the same
   compilation:                                        # This will compile ANSWERS given in timeframe and put stem_tag beforeit
 	type: month, week, day                            # The time frame of how many files to fetch, everything from last day..so on
 	frequency:                                        # Define when compilation runs on a given month, week day
@@ -144,7 +266,7 @@ yaml```
 name: "Template Name"          # Required: Template identifier
 description: "Purpose"         # Optional: Template description
 frequency: "daily"            # Required: daily, weekly, monthly, or custom
-log_path: "Submissions/Custom"
+log_path: "submissions/custom"
 
 # For custom frequency, specify schedule
 schedule:
@@ -156,7 +278,7 @@ strict occurrence shedule:   #using ! with a  number will apply strict occurranc
   days: [1!, 3!, 5!]         # 1!=Only first Monday, 7=Sunday
   #or, for days only
    days: [1-!, 3-!, 5-!]     # 1!=Only last Monday, 7= last Sunday in month
-  weeks: [1!, 3!]            # 1!=of every Week, 3!=of every 3th week 
+  weeks: [1!, 3!]            # 1!=of every Week, 3!=of every 3th week
   months: [1!, 6, 12!]       # 1!=of every month, 12!=of every year
 #must choose between strict months or strict weeks, except 12!
 #example 1:
@@ -212,7 +334,7 @@ defaults:
   frequency: "custom"
   schedule:
     days: [2, 4, 7]  # Tue/Thu/Sun
-  log_path: "Submissions/Starting_Strength"
+  log_path: "submissions/starting_strength"
   increment_on_success: true
   deload_on_fail: true
   deload_percent: 10
@@ -291,18 +413,18 @@ atlas_curl:
 ```
 ## Technical Design
 
-### 1. Core Components
+### 1. main Components
 
-#### Exercise Manager
-- Loads and validates exercise templates
+#### Template Manager
+- Loads and validates template files
 - Tracks progress and completion
-- Manages exercise scheduling
+- Manages template scheduling
 - Handles response storage
 
 #### Template System
 - YAML-based template definition
 - Validation of template structure
-- Support for custom exercise types
+- Support for custom template types
 - Template inheritance for common patterns
 
 #### Progress Tracking
@@ -347,7 +469,7 @@ Pick one to run [1-4]:
 ==============================
 
 "If I bring more awareness to my choices today…"
-I would... #users answer, they need to submit 6-10 if they did, clear screen and go to next question, like: 
+I would... #users answer, they need to submit 6-10 if they did, clear screen and go to next question, like:
 
 _________________________________
 
@@ -372,9 +494,9 @@ Exercises for Today:
   • Squat ............. 3 sets x 5 reps  @ 60 kg
   • Bench Press ....... 3 sets x 5 reps  @ 40 kg
   • Deadlift .......... 1 set  x 5 reps  @ 80 kg
-  • Atlas Curls ....... 3 sets x 10 reps @ 20 kg  
-  • Neck Curls ........ 2 sets x 12 reps @ Bodyweight 
-  • Hanging Leg Raises. 3 sets x 10 reps @ Bodyweight 
+  • Atlas Curls ....... 3 sets x 10 reps @ 20 kg
+  • Neck Curls ........ 2 sets x 12 reps @ Bodyweight
+  • Hanging Leg Raises. 3 sets x 10 reps @ Bodyweight
 
 Press enter to start...  #After starting Each warmup is calculated, entries come one by one like so:
 
@@ -639,3 +761,4 @@ Initially built for personal use, particularly to maintain a consistent journali
 To the extent possible under law, Sipos Istvan | Stephen Piper has waived all copyright and related or neighbouring rights to ENOUGH.
 
 This work is published from: Hungary.
+```

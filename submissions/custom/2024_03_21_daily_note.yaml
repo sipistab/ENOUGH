@@ -1,0 +1,27 @@
+date: "2024-03-21"
+time: "06:30:00"
+template: "daily_note"
+
+entries:
+  gratitude:
+    - "Woke up early and had time for a proper morning routine"
+    - "Great progress in yesterday's project meeting"
+    - "Support from family during challenging times"
+
+  priorities:
+    - "Complete the presentation for afternoon meeting"
+    - "Review and respond to urgent emails"
+    - "Schedule dentist appointment"
+    - "30 minutes of focused reading"
+
+  reflection: |
+    Today started with good energy after a full night's sleep. Morning routine is becoming more consistent, though I still need to work on not checking my phone first thing.
+    
+    Yesterday's challenges with the project timeline helped me realize I need to be more proactive in communicating potential delays. Will implement this learning today.
+
+  mood_rating: 8
+  energy_level: 7
+  sleep_hours: 7.5
+
+duration: 180  # seconds
+tags: ["morning_routine", "daily"] 

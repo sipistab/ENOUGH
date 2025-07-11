@@ -1,0 +1,604 @@
+name: "Nathaniel Branden's Sentence Completion Method"
+description: |
+  The Sentence Completion Method is a powerful tool for self-discovery and personal growth developed by Dr. Nathaniel Branden.
+  
+  How it works:
+  1. Each week focuses on a specific theme through sentence stems
+  2. Monday through Friday: Complete 6-10 different endings for the same stem
+  3. Weekend: Reflect on all completions from the week
+  4. Process repeats with new stems each week
+  
+  Program Structure:
+  - Weekday sessions (Mon-Fri): Same stem used for 5 consecutive days
+  - Weekend reflection (Sat/Sun): Review the week's responses
+  - Each completion should be thoughtful and honest
+  - Minimum 6 completions required, up to 10 allowed
+  - 5-minute time limit per session to encourage spontaneity
+  
+  Deloading:
+  - If unable to complete minimum responses for 3 consecutive days
+  - If responses become repetitive or shallow
+  - System will suggest taking a break and resuming with simpler stems
+
+defaults:
+  log_path: "submissions/nathaniel_branden_method"
+  compilation:
+    type: "week"
+    frequency:
+      day: [6]  # Run compilation on Saturday
+    stem_tags: ["weekend"]
+  answers_required: 6
+  min_characters: 10
+  max_time: 300
+
+q_001:
+  stem: "If I bring more awareness to my life today…"
+  tags: ["week1"]
+
+q_002:
+  stem: "If I take more responsibility for my choices and actions today…"
+  tags: ["week1"]
+
+q_003:
+  stem: "If I pay more attention to how I deal with people today…"
+  tags: ["week1"]
+
+q_004:
+  stem: "If I boost my energy level by 5 percent today…"
+  tags: ["week1"]
+
+q_005:
+  stem: "If I bring 5 percent more awareness to my important relationships…"
+  tags: ["week2"]
+
+q_006:
+  stem: "If I bring 5 percent more awareness to my insecurities…"
+  tags: ["week2"]
+
+q_007:
+  stem: "If I bring 5 percent more awareness to my deepest needs and wants…"
+  tags: ["week2"]
+
+q_008:
+  stem: "If I bring 5 percent more awareness to my emotions…"
+  tags: ["week2"]
+
+q_009:
+  stem: "If I treat listening as a creative act…"
+  tags: ["week3"]
+
+q_010:
+  stem: "If I notice how people are affected by the quality of my listening…"
+  tags: ["week3"]
+
+q_011:
+  stem: "If I bring more awareness to my dealings with people today…"
+  tags: ["week3"]
+
+q_012:
+  stem: "If I commit to dealing with people with fairness and kindness…"
+  tags: ["week3"]
+
+q_013:
+  stem: "If I bring a higher level of self-esteem to my activities today…"
+  tags: ["week4"]
+
+q_014:
+  stem: "If I bring a higher level of self-esteem to my dealings with people today…"
+  tags: ["week4"]
+
+q_015:
+  stem: "If I am 5 percent more self-accepting today…"
+  tags: ["week4"]
+
+q_016:
+  stem: "If I am self-accepting even when I make mistakes…"
+  tags: ["week4"]
+
+q_017:
+  stem: "If I am self-accepting even when I feel confused and overwhelmed…"
+  tags: ["week4"]
+
+q_018:
+  stem: "If I appreciate and care for my body…"
+  tags: ["week5"]
+
+q_019:
+  stem: "If I honor and respect my body…"
+  tags: ["week5"]
+
+q_020:
+  stem: "If I acknowledge and address my conflicts constructively…"
+  tags: ["week5"]
+
+q_021:
+  stem: "If I bring 5 percent more awareness to my personal growth…"
+  tags: ["week5"]
+
+q_022:
+  stem: "If I wanted to raise my self-esteem today, I could…"
+  tags: ["week6"]
+
+q_023:
+  stem: "If I acknowledge and understand my feelings…"
+  tags: ["week6"]
+
+q_024:
+  stem: "If I embrace and explore my feelings…"
+  tags: ["week6"]
+
+q_025:
+  stem: "If I acknowledge and understand my thoughts…"
+  tags: ["week6"]
+
+q_026:
+  stem: "If I explore and reflect on my thoughts…"
+  tags: ["week6"]
+
+q_027:
+  stem: "If I bring 5 percent more awareness to my fears…"
+  tags: ["week7"]
+
+q_028:
+  stem: "If I take small steps to face my fears with confidence…"
+  tags: ["week7"]
+
+q_029:
+  stem: "If I acknowledge my pain and seek ways to grow from it…"
+  tags: ["week7"]
+
+q_030:
+  stem: "If I bring 5 percent more focus to my emotional resilience…"
+  tags: ["week7"]
+
+q_031:
+  stem: "If I bring 5 percent more focus to my ability to stay present…"
+  tags: ["week7"]
+
+q_032:
+  stem: "If I bring 5 percent more focus to my ability to stay grounded…"
+  tags: ["week7"]
+
+q_033:
+  stem: "If I embrace and celebrate my sexuality…"
+  tags: ["week8"]
+
+q_034:
+  stem: "If I respect and understand my sexuality…"
+  tags: ["week8"]
+
+q_035:
+  stem: "If I appreciate and welcome my excitement…"
+  tags: ["week8"]
+
+q_036:
+  stem: "If I allow myself to fully experience my excitement…"
+  tags: ["week8"]
+
+q_037:
+  stem: "If I acknowledge and cultivate my intelligence…"
+  tags: ["week9"]
+
+q_038:
+  stem: "If I recognize and apply my intelligence effectively…"
+  tags: ["week9"]
+
+q_039:
+  stem: "Self-responsibility means…"
+  tags: ["week9"]
+
+q_040:
+  stem: "If I take 5 percent more responsibility for my life and well-being…"
+  tags: ["week9"]
+
+q_041:
+  stem: "If I embrace responsibility for my life and well-being…"
+  tags: ["week9"]
+
+q_042:
+  stem: "If I take 5 percent more responsibility for the attainment of my goals…"
+  tags: ["week9"]
+
+q_043:
+  stem: "If I fully commit to achieving my goals…"
+  tags: ["week9"]
+
+q_044:
+  stem: "If I take 5 percent more responsibility for the success of my relationships…"
+  tags: ["week10"]
+
+q_045:
+  stem: "Sometimes I empower myself when I…"
+  tags: ["week10"]
+
+q_046:
+  stem: "Sometimes I strengthen my confidence when I…"
+  tags: ["week10"]
+
+q_047:
+  stem: "I am becoming aware…"
+  tags: ["week10"]
+
+q_048:
+  stem: "If I take 5 percent more responsibility for my standard of living…"
+  tags: ["week10"]
+
+q_049:
+  stem: "If I take 5 percent more responsibility for my choice of companions…"
+  tags: ["week10"]
+
+q_050:
+  stem: "If I take 5 percent more responsibility for my personal happiness…"
+  tags: ["week11"]
+
+q_051:
+  stem: "If I take 5 percent more responsibility for the level of my self-esteem…"
+  tags: ["week11"]
+
+q_052:
+  stem: "Self-assertiveness means…"
+  tags: ["week11"]
+
+q_053:
+  stem: "If I lived 5 percent more assertively today…"
+  tags: ["week11"]
+
+q_054:
+  stem: "If I treat my thoughts and feelings with respect today…"
+  tags: ["week11"]
+
+q_055:
+  stem: "If I treat my wants with respect today…"
+  tags: ["week11"]
+
+q_056:
+  stem: "If I acknowledge that my wants truly matter…"
+  tags: ["week12"]
+
+q_057:
+  stem: "If I honor my own life and aspirations…"
+  tags: ["week12"]
+
+q_058:
+  stem: "If I treat my life as valuable and meaningful…"
+  tags: ["week12"]
+
+q_059:
+  stem: "If I confidently say yes when I mean yes and no when I mean no…"
+  tags: ["week12"]
+
+q_060:
+  stem: "If I openly share my unique talents and passions…"
+  tags: ["week12"]
+
+q_061:
+  stem: "If I express 5 percent more of who I am…"
+  tags: ["week12"]
+
+q_062:
+  stem: "Living purposefully to me means…"
+  tags: ["week13"]
+
+q_063:
+  stem: "If I bring 5 percent more purposefulness into my life…"
+  tags: ["week13"]
+
+q_064:
+  stem: "If I operate 5 percent more purposefully at work…"
+  tags: ["week13"]
+
+q_065:
+  stem: "If I operate 5 percent more purposefully in my relationships…"
+  tags: ["week13"]
+
+q_066:
+  stem: "If I operate 5 percent more purposefully in marriage…"
+  tags: ["week13"]
+
+q_067:
+  stem: "If I operate 5 percent more purposefully with my children…"
+  tags: ["week13"]
+
+q_068:
+  stem: "If I am 5 percent more intentional about my deepest yearnings…"
+  tags: ["week14"]
+
+q_069:
+  stem: "If I take more responsibility for fulfilling my wants…"
+  tags: ["week14"]
+
+q_070:
+  stem: "If I make my happiness a conscious goal…"
+  tags: ["week14"]
+
+q_071:
+  stem: "Integrity means…"
+  tags: ["week15"]
+
+q_072:
+  stem: "If I look at instances in which I find full integrity difficult…"
+  tags: ["week15"]
+
+q_073:
+  stem: "If I bring 5 percent more integrity into my life…"
+  tags: ["week15"]
+
+q_074:
+  stem: "If I bring 5 percent more integrity to my work…"
+  tags: ["week15"]
+
+q_075:
+  stem: "If I bring 5 percent more integrity to my relationship…"
+  tags: ["week15"]
+
+q_076:
+  stem: "If I remain loyal to the values I believe are right…"
+  tags: ["week16"]
+
+q_077:
+  stem: "If I live by values I truly respect…"
+  tags: ["week16"]
+
+q_078:
+  stem: "If I treat my self-respect as a high priority…"
+  tags: ["week16"]
+
+q_079:
+  stem: "If the child in me could speak, he/she would say…"
+  tags: ["week19"]
+
+q_080:
+  stem: "If the teenager I once was still exists inside of me…"
+  tags: ["week19"]
+
+q_081:
+  stem: "If my teenage self could speak, he/she would say…"
+  tags: ["week19"]
+
+q_082:
+  stem: "At the thought of reaching back to help my child self…"
+  tags: ["week19"]
+
+q_083:
+  stem: "At the thought of reaching back to help my teenage self…"
+  tags: ["week19"]
+
+q_084:
+  stem: "If I could make friends with my younger selves…"
+  tags: ["week19"]
+
+q_085:
+  stem: "If my child self felt accepted by me…"
+  tags: ["week20"]
+
+q_086:
+  stem: "If my teenage self felt I was on his/her side…"
+  tags: ["week20"]
+
+q_087:
+  stem: "If my younger selves felt I had compassion for their struggles…"
+  tags: ["week20"]
+
+q_088:
+  stem: "If I could hold my child self in my arms…"
+  tags: ["week20"]
+
+q_089:
+  stem: "If I could hold my teenage self in my arms…"
+  tags: ["week20"]
+
+q_090:
+  stem: "If I had the courage and compassion to embrace and love my younger selves…"
+  tags: ["week20"]
+
+q_091:
+  stem: "Sometimes my child self feels rejected by me when I…"
+  tags: ["week21"]
+
+q_092:
+  stem: "Sometimes my teenage self feel rejected by me when I…"
+  tags: ["week21"]
+
+q_093:
+  stem: "One of the things my child self needs from me and rarely gets…"
+  tags: ["week21"]
+
+q_094:
+  stem: "One of the things my teenage self needs from me and has not received is…"
+  tags: ["week21"]
+
+q_095:
+  stem: "One of the ways my child self gets back at me for rejecting him/her is…"
+  tags: ["week21"]
+
+q_096:
+  stem: "One of the ways my teenage self gets back at me for rejecting him/her is…"
+  tags: ["week21"]
+
+q_097:
+  stem: "At the thought of giving my child self what he/she needs from me…"
+  tags: ["week22"]
+
+q_098:
+  stem: "At the thought of giving my teenage self what he/she needs from me…"
+  tags: ["week22"]
+
+q_099:
+  stem: "If my child self and I were to fall in love…"
+  tags: ["week22"]
+
+q_100:
+  stem: "If my teenage self and I were to fall in love…"
+  tags: ["week22"]
+
+q_101:
+  stem: "If I accept that my child self may need time to learn to trust me…"
+  tags: ["week23"]
+
+q_102:
+  stem: "If I accept that my teenage self may need time to learn to trust me…"
+  tags: ["week23"]
+
+q_103:
+  stem: "As I come to understand that my child self and my teenage self are both part of me…"
+  tags: ["week23"]
+
+q_104:
+  stem: "I am becoming aware…"
+  tags: ["week23"]
+
+q_105:
+  stem: "Sometimes when I am afraid, I…"
+  tags: ["week24"]
+
+q_106:
+  stem: "Sometimes when I am hurt, I…"
+  tags: ["week24"]
+
+q_107:
+  stem: "Sometimes when I am angry, I…"
+  tags: ["week24"]
+
+q_108:
+  stem: "An effective way to handle fear might be to…"
+  tags: ["week24"]
+
+q_109:
+  stem: "An effective way to handle hurt might be to…"
+  tags: ["week24"]
+
+q_110:
+  stem: "An effective way to handle anger might be to…"
+  tags: ["week24"]
+
+q_111:
+  stem: "Sometimes when I am excited, I…"
+  tags: ["week25"]
+
+q_112:
+  stem: "Sometimes when I am aroused sexually, I…"
+  tags: ["week25"]
+
+q_113:
+  stem: "Sometimes when I experience strong feelings, I…"
+  tags: ["week25"]
+
+q_114:
+  stem: "If I make friends with my excitement…"
+  tags: ["week25"]
+
+q_115:
+  stem: "If I make friends with my sexuality…"
+  tags: ["week25"]
+
+q_116:
+  stem: "As I grow more comfortable with the full range of my emotions…"
+  tags: ["week25"]
+
+q_117:
+  stem: "If I think about becoming better friends with my child self…"
+  tags: ["week26"]
+
+q_118:
+  stem: "If I think about becoming better friends with my teenage self…"
+  tags: ["week26"]
+
+q_119:
+  stem: "As my younger selves become more comfortable with me…"
+  tags: ["week26"]
+
+q_120:
+  stem: "As I create a safe space for my child self…"
+  tags: ["week26"]
+
+q_121:
+  stem: "As I create a safe space for my teenage self…"
+  tags: ["week26"]
+
+q_122:
+  stem: "Mother gave me a view of myself as…"
+  tags: ["week27"]
+
+q_123:
+  stem: "Father gave me a view of myself as…"
+  tags: ["week27"]
+
+q_124:
+  stem: "Mother speaks through my voice when I tell myself…"
+  tags: ["week27"]
+
+q_125:
+  stem: "Father speaks through my voice when I tell myself…"
+  tags: ["week27"]
+
+q_126:
+  stem: "If I bring 5 percent more awareness to my relationship with my mother…"
+  tags: ["week28"]
+
+q_127:
+  stem: "If I bring 5 percent more awareness to my relationship with my father…"
+  tags: ["week28"]
+
+q_128:
+  stem: "If I look at my mother and father realistically…"
+  tags: ["week28"]
+
+q_129:
+  stem: "If I reflect on the level of awareness I bring to my relationship with my mother…"
+  tags: ["week28"]
+
+q_130:
+  stem: "If I reflect on the level of awareness I bring to my relationship with my father…"
+  tags: ["week28"]
+
+q_131:
+  stem: "At the thought of being free of Mother psychologically…"
+  tags: ["week29"]
+
+q_132:
+  stem: "At the thought of being free of Father psychologically…"
+  tags: ["week29"]
+
+q_133:
+  stem: "At the thought of belonging fully to myself…"
+  tags: ["week29"]
+
+q_134:
+  stem: "If my life really does belong to me…"
+  tags: ["week29"]
+
+q_135:
+  stem: "If I really am capable of independent survival…"
+  tags: ["week29"]
+
+q_136:
+  stem: "If I bring 5 percent more awareness to my life…"
+  tags: ["week30"]
+
+q_137:
+  stem: "If I am 5 percent more self-accepting…"
+  tags: ["week30"]
+
+q_138:
+  stem: "If I bring 5 percent more self-responsibility to my life…"
+  tags: ["week30"]
+
+q_139:
+  stem: "If I operate 5 percent more self-assertively…"
+  tags: ["week30"]
+
+q_140:
+  stem: "If I live my life 5 percent more purposefully…"
+  tags: ["week30"]
+
+q_141:
+  stem: "If I bring 5 percent more integrity to my life…"
+  tags: ["week30"]
+
+q_142:
+  stem: "If I breathe deeply and allow myself to experience what self-esteem feels like…"
+  tags: ["week30"]
+
+q_143:
+  stem: "If any of what I have been writing this week is true..."
+  tags: ["weekend"] 

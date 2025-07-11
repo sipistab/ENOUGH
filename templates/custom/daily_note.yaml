@@ -1,0 +1,64 @@
+name: "Daily Note Template"
+description: |
+  A flexible daily note template for capturing thoughts, reflections, and progress.
+  Designed to be simple yet effective for maintaining a consistent journaling practice.
+  
+  Structure:
+  - Morning intention setting
+  - Throughout-day note taking
+  - Evening reflection
+  - Next day preparation
+
+defaults:
+  frequency: "daily"
+  log_path: "submissions/daily_notes"
+  answers_required: 1
+  min_characters: 20
+  max_time: 900  # 15 minutes
+  start_date: "2024-03-20"
+
+prompts:
+  morning_intention:
+    prompt: "Today I intend to..."
+    description: "Set clear intentions for the day"
+    tags: ["morning", "planning"]
+    time_window: "04:00-10:00"
+    min_characters: 50
+
+  gratitude:
+    prompt: "I am grateful for..."
+    description: "Practice daily gratitude"
+    tags: ["morning", "gratitude"]
+    time_window: "04:00-10:00"
+    answers_required: 3
+    min_characters: 10
+
+  daily_notes:
+    prompt: "Notable moments, thoughts, or insights from today..."
+    description: "Capture significant moments"
+    tags: ["reflection"]
+    min_characters: 50
+
+  evening_reflection:
+    prompt: "Today's highlights and learnings..."
+    description: "Review the day"
+    tags: ["evening", "reflection"]
+    time_window: "18:00-23:59"
+    min_characters: 100
+
+  tomorrow_prep:
+    prompt: "Key tasks and focus areas for tomorrow..."
+    description: "Prepare for tomorrow"
+    tags: ["evening", "planning"]
+    time_window: "18:00-23:59"
+    min_characters: 50
+
+compilation:
+  type: "week"
+  frequency:
+    day: [7]  # Sunday
+  prompts:
+    - "What patterns emerged this week?"
+    - "What progress did I make on my goals?"
+    - "What challenges did I face?"
+    - "What adjustments would benefit next week?" 
