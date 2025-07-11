@@ -1,7 +1,7 @@
 include LICENSE
 include README.md
-include pyproject.toml
-recursive-include Core/enough/templates *.yaml
-recursive-include Core/enough/data *
-recursive-include Exercises *.yaml
-include progress.yaml 
+include DESIGN.md
+ 
+recursive-include enough/templates *.yaml
+recursive-include enough/schema *.json
+recursive-include tests *.py 

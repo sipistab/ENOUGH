@@ -1,61 +1,54 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "enough-journal"
 version = "0.1.0"
-description = "A mindful journaling tool for self-reflection and personal growth"
+description = "A command-line tool for personal development through structured journaling"
 readme = "README.md"
 requires-python = ">=3.8"
-license = "MIT"
+license = {file = "LICENSE"}
 authors = [
-    { name = "Stephen Piper", email = "sipos.istvan.a@gmail.com" }
+    {name = "Sipos Istvan | Stephen Piper"}
 ]
-keywords = ["journal", "mindfulness", "self-reflection", "personal-growth", "cli"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Environment :: Console",
     "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
     "Topic :: Office/Business :: News/Diary",
-    "Topic :: Text Processing :: Markup",
 ]
 dependencies = [
-    "pyyaml>=6.0",
-    "click>=8.0",
-    "rich>=13.0",
-    "pathlib>=1.0",
-    "typing-extensions>=4.0",
+    "click>=8.0.0",
+    "PyYAML>=6.0.0",
+    "rich>=12.0.0",
 ]
 
-[project.urls]
-Homepage = "https://github.com/yourusername/enough"
-Issues = "https://github.com/yourusername/enough/issues"
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "isort>=5.0.0",
+    "flake8>=4.0.0",
+]
 
 [project.scripts]
-enough = "enough.__main__:main"
+enough = "enough.cli:main"
 
-[tool.hatch.build.targets.wheel]
-packages = ["Core/enough"]
+[tool.setuptools]
+packages = ["enough"]
 
-[tool.hatch.build]
-include = [
-    "Core/enough/**/*.py",
-    "Core/enough/**/*.yaml",
-    "Core/enough/templates/*.yaml",
-    "README.md",
-    "LICENSE",
-]
-exclude = [
-    "**/__pycache__",
-    "**/*.pyc",
-    "**/.DS_Store",
-    "tests/**/*",
-] 
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3 

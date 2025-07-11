@@ -25,30 +25,23 @@ Scheduling my notes enables me to stay consistent. Recurring tasks keep me relia
 ### 2. Data Structure
 ```
 main/                           # Core program files
-  ├── install.bat              # Windows installation script
-  ├── install.sh              # Unix installation script
-  ├── MANIFEST.in             # Python package manifest
-  ├── progress.yaml           # Progress tracking
-  ├── pyproject.toml         # Project configuration
-  └── setup.py               # Package setup
 
 templates/                      # Exercise templates
   ├── nathaniel_branden_method/  # Branden's sentence completion
   │   ├── sentence_completion.yaml  # Weekly stems
-  │   └── branden_method.yaml      # Method configuration
   ├── custom/                    # User-defined templates
   │   └── daily_note.yaml        # Daily reflection template
   └── starting_strenght/         # Workout tracking
       └── workouts.yaml          # Workout configuration
 
-submissions/                    # User entries
+submissions/                     # User entries
   ├── nathaniel_branden_method/  # Branden method entries
-  │   ├── YYYY_MM_DD_1.yaml     # Daily entries
-  │   └── YYYY_MM_DD_weekend.yaml # Weekend reflections
+  │   ├── YYYY_MM_DD_1.yaml      # Daily entries
+  │   └── YYYY_MM_WW.yaml        # Weekly reflections
   ├── custom/                    # Custom template entries
-  │   └── YYYY_MM_DD_*.yaml     # Various custom entries
+  │   └── YYYY_MM_DD_1.yaml      # Various custom entries
   └── starting_strength/         # Workout logs
-      └── YYYY_MM_DD_1.yaml     # Daily workout logs
+      └── YYYY_MM_DD_1.yaml      # Daily workout logs
 
 maintenance/                    # Maintenance scripts and tools
 ```
