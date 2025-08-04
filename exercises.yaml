@@ -1,0 +1,287 @@
+exercises:
+  # Custom Morning Exercise
+  - name: "Morning Check-in"
+    prompt: "How are you feeling this morning? What are you looking forward to today? What would you like to accomplish?"
+    frequency: "daily"
+    week: "morning"
+    type: "morning_checkin"
+    instructions: "Take a moment to reflect on your morning energy and set intentions for the day ahead."
+    
+  # Custom Evening Exercise  
+  - name: "Evening Reflection"
+    prompt: "How was your day? What did you accomplish? How are you feeling now? What are you grateful for?"
+    frequency: "daily"
+    week: "evening"
+    type: "evening_reflection"
+    instructions: "Reflect on your day, acknowledge your accomplishments, and practice gratitude."
+
+  # Week 1 - 4 stems
+  - name: "Week 1 - ID1 Awareness"
+    prompt: "If I bring more awareness to my life today…"
+    frequency: "weekly"
+    week: 1
+    stem_id: "ID1"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 1 - ID2 Responsibility"
+    prompt: "If I take more responsibility for my choices and actions today…"
+    frequency: "weekly"
+    week: 1
+    stem_id: "ID2"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 1 - ID3 People"
+    prompt: "If I pay more attention to how I deal with people today…"
+    frequency: "weekly"
+    week: 1
+    stem_id: "ID3"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 1 - ID4 Energy"
+    prompt: "If I boost my energy level by 5 percent today…"
+    frequency: "weekly"
+    week: 1
+    stem_id: "ID4"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+
+  # Week 2 - 4 stems
+  - name: "Week 2 - ID5 Relationships"
+    prompt: "If I bring 5 percent more awareness to my important relationships…"
+    frequency: "weekly"
+    week: 2
+    stem_id: "ID5"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 2 - ID6 Insecurities"
+    prompt: "If I bring 5 percent more awareness to my insecurities…"
+    frequency: "weekly"
+    week: 2
+    stem_id: "ID6"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 2 - ID7 Needs and Wants"
+    prompt: "If I bring 5 percent more awareness to my deepest needs and wants…"
+    frequency: "weekly"
+    week: 2
+    stem_id: "ID7"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 2 - ID8 Emotions"
+    prompt: "If I bring 5 percent more awareness to my emotions…"
+    frequency: "weekly"
+    week: 2
+    stem_id: "ID8"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+
+  # Week 3 - 4 stems
+  - name: "Week 3 - ID9 Listening"
+    prompt: "If I treat listening as a creative act…"
+    frequency: "weekly"
+    week: 3
+    stem_id: "ID9"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 3 - ID10 Listening Impact"
+    prompt: "If I notice how people are affected by the quality of my listening…"
+    frequency: "weekly"
+    week: 3
+    stem_id: "ID10"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 3 - ID11 People Awareness"
+    prompt: "If I bring more awareness to my dealings with people today…"
+    frequency: "weekly"
+    week: 3
+    stem_id: "ID11"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 3 - ID12 Fairness and Kindness"
+    prompt: "If I commit to dealing with people with fairness and kindness…"
+    frequency: "weekly"
+    week: 3
+    stem_id: "ID12"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+
+  # Week 4 - 5 stems
+  - name: "Week 4 - ID13 Self-Esteem Activities"
+    prompt: "If I bring a higher level of self-esteem to my activities today…"
+    frequency: "weekly"
+    week: 4
+    stem_id: "ID13"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 4 - ID14 Self-Esteem People"
+    prompt: "If I bring a higher level of self-esteem to my dealings with people today…"
+    frequency: "weekly"
+    week: 4
+    stem_id: "ID14"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 4 - ID15 Self-Acceptance"
+    prompt: "If I am 5 percent more self-accepting today…"
+    frequency: "weekly"
+    week: 4
+    stem_id: "ID15"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 4 - ID16 Self-Acceptance Mistakes"
+    prompt: "If I am self-accepting even when I make mistakes…"
+    frequency: "weekly"
+    week: 4
+    stem_id: "ID16"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 4 - ID17 Self-Acceptance Confusion"
+    prompt: "If I am self-accepting even when I feel confused and overwhelmed…"
+    frequency: "weekly"
+    week: 4
+    stem_id: "ID17"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+
+  # Week 5 - 4 stems
+  - name: "Week 5 - ID18 Body Care"
+    prompt: "If I appreciate and care for my body…"
+    frequency: "weekly"
+    week: 5
+    stem_id: "ID18"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 5 - ID19 Body Respect"
+    prompt: "If I honor and respect my body…"
+    frequency: "weekly"
+    week: 5
+    stem_id: "ID19"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 5 - ID20 Conflicts"
+    prompt: "If I acknowledge and address my conflicts constructively…"
+    frequency: "weekly"
+    week: 5
+    stem_id: "ID20"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 5 - ID21 Personal Growth"
+    prompt: "If I bring 5 percent more awareness to my personal growth…"
+    frequency: "weekly"
+    week: 5
+    stem_id: "ID21"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+
+  # Week 6 - 5 stems
+  - name: "Week 6 - ID22 Raising Self-Esteem"
+    prompt: "If I wanted to raise my self-esteem today, I could…"
+    frequency: "weekly"
+    week: 6
+    stem_id: "ID22"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 6 - ID23 Understanding Feelings"
+    prompt: "If I acknowledge and understand my feelings…"
+    frequency: "weekly"
+    week: 6
+    stem_id: "ID23"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 6 - ID24 Exploring Feelings"
+    prompt: "If I embrace and explore my feelings…"
+    frequency: "weekly"
+    week: 6
+    stem_id: "ID24"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 6 - ID25 Understanding Thoughts"
+    prompt: "If I acknowledge and understand my thoughts…"
+    frequency: "weekly"
+    week: 6
+    stem_id: "ID25"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 6 - ID26 Exploring Thoughts"
+    prompt: "If I explore and reflect on my thoughts…"
+    frequency: "weekly"
+    week: 6
+    stem_id: "ID26"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+
+  # Week 7 - 6 stems
+  - name: "Week 7 - ID27 Fear Awareness"
+    prompt: "If I bring 5 percent more awareness to my fears…"
+    frequency: "weekly"
+    week: 7
+    stem_id: "ID27"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 7 - ID28 Facing Fears"
+    prompt: "If I take small steps to face my fears with confidence…"
+    frequency: "weekly"
+    week: 7
+    stem_id: "ID28"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 7 - ID29 Pain and Growth"
+    prompt: "If I acknowledge my pain and seek ways to grow from it…"
+    frequency: "weekly"
+    week: 7
+    stem_id: "ID29"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 7 - ID30 Emotional Resilience"
+    prompt: "If I bring 5 percent more focus to my emotional resilience…"
+    frequency: "weekly"
+    week: 7
+    stem_id: "ID30"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 7 - ID31 Staying Present"
+    prompt: "If I bring 5 percent more focus to my ability to stay present…"
+    frequency: "weekly"
+    week: 7
+    stem_id: "ID31"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+    
+  - name: "Week 7 - ID32 Staying Grounded"
+    prompt: "If I bring 5 percent more focus to my ability to stay grounded…"
+    frequency: "weekly"
+    week: 7
+    stem_id: "ID32"
+    type: "sentence_completion"
+    instructions: "Complete this sentence 6-10 times each day, Monday through Friday. Each completion should be different and authentic."
+
+  # Weekend Reflection (available every weekend)
+  - name: "Weekend Reflection"
+    prompt: "If any of what I have been writing this week is true…"
+    frequency: "weekend"
+    week: "reflection"
+    type: "weekend_reflection"
+    instructions: "Reflect on your week's practice. What patterns emerged? What did you learn about yourself? What would you like to focus on next week?" 

@@ -1,7 +1,0 @@
-include LICENSE
-include README.md
-include DESIGN.md
- 
-recursive-include enough/templates *.yaml
-recursive-include enough/schema *.json
-recursive-include tests *.py 

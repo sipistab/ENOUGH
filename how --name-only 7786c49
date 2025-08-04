@@ -1,0 +1,10 @@
+[33m7786c49[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m Project restructure: Moved install scripts to root, added README, updated templates and configuration files
+[33m560edf4[m Project structure established: Organized templates and submissions directories, updated design document to match implementation, added sample entries
+[33m96a3884[m Major restructure: Clean slate for rebuild. Removed old implementation while preserving project structure and setup files. Added comprehensive DESIGN.md as blueprint for new implementation.
+[33mb4183ba[m Cleanup: Move everything to Core, update license to CC0, simplify project structure
+[33mc66e8aa[m Initial commit: ENOUGH - A mindful journaling tool
+[33me302e9a[m Initial release: ENOUGH - A CLI Journal
+[33mdb5631e[m Add installation methods (PyPI, AUR, scripts) and TODO list for remaining setup
+[33m6a7f975[m Update README with upcoming features and custom template plans
+[33mc40ba5c[m Restructured project to match requested layout
+[33mad17b3b[m Major Project Restructure

@@ -1,11 +1,28 @@
+Metadata-Version: 2.4
+Name: enough-journal
+Version: 0.2.0
+Summary: A minimal journaling application with Nathaniel Branden sentence completion exercises
+Author-email: Sipos Istvan <sipistab@gmail.com>
+Project-URL: Homepage, https://github.com/sipistab/enough
+Project-URL: Bug Tracker, https://github.com/sipistab/enough/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Office/Business :: News/Diary
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyYAML>=6.0.0
+Dynamic: license-file
+
 
 
 # ENOUGH - The Growth Journal
 
 A command-line tool for personal development through structured journaling and reflection exercises, with a particular focus on the **Nathaniel Branden sentence completion method**.
-
-## TODO
-- [ ] Add PyPI API key to ~/.pypirc for automated publishing
 
 ## What This Is
 
