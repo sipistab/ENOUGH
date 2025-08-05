@@ -1,4 +1,26 @@
 exercises:
+  - name: "Morning Check-in"
+    type: "custom"
+    time: "morning"
+    stems:
+      - "This morning I feel..."
+      - "Today I want to..."
+      - "I am grateful for..."
+      - "I am looking forward to..."
+      - "I am concerned about..."
+      - "I will focus on..."
+
+  - name: "Afternoon Reflection"
+    type: "custom"
+    time: "afternoon"
+    stems:
+      - "Right now I feel..."
+      - "Today I accomplished..."
+      - "I am learning..."
+      - "I am grateful for..."
+      - "Tomorrow I will..."
+      - "I am becoming..."
+
   - week: 1
     stems:
       - "Right now I am aware..."

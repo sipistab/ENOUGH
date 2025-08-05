@@ -72,9 +72,30 @@ class Journaler:
             return None
         
         current_week = self.tracker.progress["current_week"]
+        
+        # Check if we have a start date to calculate proper week
+        if self.tracker.progress.get("start_date"):
+            start_date = datetime.strptime(self.tracker.progress["start_date"], "%Y-%m-%d")
+            today = datetime.now()
+            days_since_start = (today - start_date).days
+            calculated_week = (days_since_start // 7) + 1
+            
+            # Use calculated week if it's different from stored week
+            if calculated_week != current_week:
+                self.tracker.progress["current_week"] = calculated_week
+                self.tracker.save_progress()
+                current_week = calculated_week
+        
+        # Find exercise for current week
         for exercise in self.exercises:
-            if exercise["week"] == current_week:
+            if exercise.get("week") == current_week:
                 return exercise
+        
+        # If no exercise found for current week, check if we're beyond the program
+        if current_week > 30:
+            print(f"You've completed all 30 weeks! Current week: {current_week}")
+            return None
+        
         return None
     
     def handle_first_time_user(self):
@@ -193,8 +214,8 @@ class Journaler:
         print()
         print("Choose Your exercise:")
         print("1. Nathaniel Branden - Sentence Completion Exercises from the Six Pillars of Self Esteem")
-        print("2. Custom Exercise Name here")
-        print("3. Custom Exercise Name here")
+        print("2. Morning Check-in")
+        print("3. Afternoon Reflection")
         print("X. for analytics")
         print()
     
@@ -244,6 +265,24 @@ class Journaler:
             current_date = datetime.now().strftime("%Y%m%d")
             self.save_submission(exercise_name, current_date, reflection_stem, reflection_completions)
     
+    def run_custom_exercise(self, exercise: Dict):
+        """Run a custom exercise (morning/afternoon)"""
+        print(f"\n{exercise['name']}")
+        print("=" * 50)
+        
+        exercise_name = f"custom_{exercise['time']}"
+        current_date = datetime.now().strftime("%Y%m%d")
+        
+        # Run all stems for custom exercises
+        for i, stem in enumerate(exercise["stems"], 1):
+            print(f"\nStem {i}: {stem}")
+            completions = self.get_user_completions(stem)
+            
+            # Save submission
+            self.save_submission(exercise_name, current_date, stem, completions)
+        
+        print(f"\n✅ Completed {exercise['name']}")
+
     def run_exercise(self, exercise: Dict):
         current_week = self.tracker.progress["current_week"]
         current_day = self.tracker.progress["current_day"]
@@ -299,8 +338,20 @@ class Journaler:
                     self.run_exercise(exercise)
                 else:
                     print("No exercise found for current week")
-            elif choice in ["2", "3"]:
-                print("Custom exercises not implemented yet")
+            elif choice == "2":
+                # Morning Check-in
+                morning_exercise = next((ex for ex in self.exercises if ex.get("type") == "custom" and ex.get("time") == "morning"), None)
+                if morning_exercise:
+                    self.run_custom_exercise(morning_exercise)
+                else:
+                    print("Morning exercise not found")
+            elif choice == "3":
+                # Afternoon Reflection
+                afternoon_exercise = next((ex for ex in self.exercises if ex.get("type") == "custom" and ex.get("time") == "afternoon"), None)
+                if afternoon_exercise:
+                    self.run_custom_exercise(afternoon_exercise)
+                else:
+                    print("Afternoon exercise not found")
             else:
                 print("Invalid choice. Please try again.")
 
