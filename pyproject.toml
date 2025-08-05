@@ -34,8 +34,8 @@ dependencies = [
 enough-journal = "enough:main"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/enough"
-Repository = "https://github.com/yourusername/enough"
+Homepage = "https://github.com/sipistab/ENOUGH"
+Repository = "https://github.com/sipistab/ENOUGH"
 
 [tool.setuptools]
 packages = ["enough"]
