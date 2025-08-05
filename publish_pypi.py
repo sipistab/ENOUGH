@@ -82,7 +82,7 @@ def upload_to_pypi():
         return False
     
     # Set environment variables for this session
-    os.environ['TWINE_USERNAME'] = username
+    os.environ['TWINE_USERNAME'] = "__token__"
     os.environ['TWINE_PASSWORD'] = api_token
     
     # Upload to PyPI
