@@ -68,6 +68,19 @@ def upload_to_pypi():
     for file in dist_files:
         print(f"   - {file}")
     
+    # Get PyPI credentials
+    print("\n🔐 PyPI Credentials Required")
+    username = input("Enter your PyPI username: ").strip()
+    password = input("Enter your PyPI password/API token: ").strip()
+    
+    if not username or not password:
+        print("❌ Username and password are required")
+        return False
+    
+    # Set environment variables for this session
+    os.environ['TWINE_USERNAME'] = username
+    os.environ['TWINE_PASSWORD'] = password
+    
     # Upload to PyPI
     result = run_command("twine upload dist/*", "Uploading to PyPI")
     return result is not None
