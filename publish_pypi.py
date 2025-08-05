@@ -47,7 +47,9 @@ def build_package():
     
     # Clean previous builds
     if os.path.exists("dist"):
-        run_command("Remove-Item dist -Recurse -Force", "Cleaning previous builds")
+        import shutil
+        shutil.rmtree("dist")
+        print("✅ Cleaned previous builds")
     
     # Build the package
     result = run_command("python -m build", "Building package")
@@ -70,19 +72,24 @@ def upload_to_pypi():
     
     # Get PyPI credentials
     print("\n🔐 PyPI Credentials Required")
+    print("💡 PyPI now requires API tokens instead of passwords.")
+    print("   Get your token at: https://pypi.org/manage/account/token/")
     username = input("Enter your PyPI username: ").strip()
-    password = input("Enter your PyPI password/API token: ").strip()
+    api_token = input("Enter your PyPI API token: ").strip()
     
-    if not username or not password:
-        print("❌ Username and password are required")
+    if not username or not api_token:
+        print("❌ Username and API token are required")
         return False
     
     # Set environment variables for this session
     os.environ['TWINE_USERNAME'] = username
-    os.environ['TWINE_PASSWORD'] = password
+    os.environ['TWINE_PASSWORD'] = api_token
     
     # Upload to PyPI
     result = run_command("twine upload dist/*", "Uploading to PyPI")
+    if result is None:
+        print("💡 Try running: twine upload dist/* --verbose")
+        print("   Or check your API token at: https://pypi.org/manage/account/token/")
     return result is not None
 
 def main():
