@@ -51,12 +51,12 @@ class Journaler:
     
     def load_exercises(self) -> List[Dict]:
         try:
-            # First try to load from package directory
-            import pkg_resources
-            exercises_file = pkg_resources.resource_filename('enough', 'exercises.yaml')
-            with open(exercises_file, 'r') as f:
-                data = yaml.safe_load(f)
-                return data.get("exercises", [])
+            # First try to load from package directory using modern importlib
+            import importlib.resources
+            with importlib.resources.path('enough', 'exercises.yaml') as exercises_file:
+                with open(exercises_file, 'r') as f:
+                    data = yaml.safe_load(f)
+                    return data.get("exercises", [])
         except (FileNotFoundError, ImportError):
             try:
                 # Fallback to local directory
