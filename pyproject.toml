@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "enough-journal"
-version = "0.3.3"
+version = "0.3.5"
 description = "Nathaniel Branden Sentence Completion Journal"
 readme = "README.md"
 license = {text = "CC0-1.0"}
@@ -40,4 +40,4 @@ Repository = "https://github.com/sipistab/ENOUGH"
 packages = ["enough"]
 
 [tool.setuptools.package-data]
-enough = ["*.yaml"] 
+enough = ["*.yaml", "journals/*.yaml"] 

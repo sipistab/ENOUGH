@@ -1,0 +1,13 @@
+name: "Afternoon Reflection"
+description: "Daily afternoon reflection and learning"
+type: "custom"
+time: "afternoon"
+stems_per_day: 6
+
+stems:
+  - "Right now I feel..."
+  - "Today I accomplished..."
+  - "I am learning..."
+  - "I am grateful for..."
+  - "Tomorrow I will..."
+  - "I am becoming..." 

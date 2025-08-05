@@ -1,0 +1,13 @@
+name: "Morning Check-in"
+description: "Daily morning reflection and intention setting"
+type: "custom"
+time: "morning"
+stems_per_day: 6
+
+stems:
+  - "This morning I feel..."
+  - "Today I want to..."
+  - "I am grateful for..."
+  - "I am looking forward to..."
+  - "I am concerned about..."
+  - "I will focus on..." 
