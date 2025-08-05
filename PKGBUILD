@@ -8,8 +8,8 @@ url="https://github.com/sipistab/ENOUGH"
 license=('CC0')
 depends=('python' 'python-pyyaml')
 makedepends=('python-setuptools' 'python-wheel' 'python-build')
-source=("$pkgname-$pkgver.tar.gz")
-sha256sums=('SKIP')
+source=("https://github.com/sipistab/ENOUGH/archive/refs/tags/v0.3.1.tar.gz")
+sha256sums=("SKIP")
 
 build() {
     cd "$srcdir/$pkgname-$pkgver"
